@@ -1,0 +1,24 @@
+{
+    "name": "tech-talk",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "mdx-deck deck.mdx",
+        "build": "mdx-deck build deck.mdx"
+    },
+    "keywords": [],
+    "author": "Emile Choghi",
+    "license": "MIT",
+    "devDependencies": {
+        "css-loader": "^1.0.0",
+        "mdx-deck": "^1.6.3",
+        "rimraf": "^2.6.2",
+        "style-loader": "^0.23.1"
+    },
+    "dependencies": {
+        "codemirror": "^5.40.2",
+        "react": "^16.5.2",
+        "react-codemirror2": "^5.1.0"
+    }
+}
