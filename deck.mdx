@@ -1,10 +1,13 @@
 import {Appear, Notes} from 'mdx-deck'
 import {CodeBlock} from './components/code-block'
-import 'style-loader!css-loader!codemirror/lib/codemirror.css'
-import 'style-loader!css-loader!./cm-night-owl.css'
-import 'style-loader!css-loader!./styles.css'
-import 'codemirror/mode/javascript/javascript'
-import 'codemirror/mode/jsx/jsx'
+import 'isomorphic-style-loader!css-loader!codemirror/lib/codemirror.css'
+import 'isomorphic-style-loader!css-loader!./cm-night-owl.css'
+import 'isomorphic-style-loader!css-loader!./styles.css'
+
+if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
+    import 'codemirror/mode/javascript/javascript'
+    import 'codemirror/mode/jsx/jsx'
+}
 
 export {default as theme} from './theme'
 
@@ -16,10 +19,9 @@ export {default as theme} from './theme'
 
 # What this talk is
 
-- Typical lifecycle of a component <br /><small>(not what you're thinking)</small>
-- How patterns can simplify
-- Composability
-- A challenge
+- What Jest and Enzyme are
+- How testing patterns can simplify development
+- Why we don't need 100% coverage
 
 <img width="70px" height="70px" src="public/standard/smile.png" />
 
