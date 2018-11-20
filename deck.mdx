@@ -1,35 +1,76 @@
-import {Appear, Notes} from 'mdx-deck'
-import {CodeBlock} from './components/code-block'
-import 'isomorphic-style-loader!css-loader!codemirror/lib/codemirror.css'
-import 'isomorphic-style-loader!css-loader!./cm-night-owl.css'
-import 'isomorphic-style-loader!css-loader!./styles.css'
-import './script.js'
+import { Appear, Notes } from 'mdx-deck';
+import { CodeBlock } from './components/code-block';
+import 'isomorphic-style-loader!css-loader!codemirror/lib/codemirror.css';
+import 'isomorphic-style-loader!css-loader!./cm-night-owl.css';
+import 'isomorphic-style-loader!css-loader!./styles.css';
+import './script.js';
 
-export {default as theme} from './theme'
+export { default as theme } from './theme';
 
 # Testing the PADM with Jest
 
-<img width="200px" height="100px" src="public/standard/jest-react.png" />
-
-<CodeBlock>const hello = () => 'world';</CodeBlock>
+<p>Emile Choghi</p>
 
 ---
 
 # What this talk is
 
-- What Jest and Enzyme are
-- How testing patterns can simplify development
-- Why we don't need 100% coverage
+-   What Jest and react-testing-library are
+-   Why we're not using Enzyme
+-   How the PADM v2 is being tested
+-   What comes next for the PADM?
 
 <img width="70px" height="70px" src="public/standard/smile.png" />
 
 ---
 
-# What this talk is not
+# What is Jest?
 
-- tbd
+-   Open source testing library, written by Facebook.
+-   For testing all JavaScript code, popular with React, React Native communities.
+-   Uses Jasmine as its testing engine.
+-   Zero config necessary, lots of tools.
 
 ---
+
+# Jest Features
+
+<ul style={{ fontSize: 40, textAlign: 'left' }}>
+    <Appear>
+        <li>Snapshot testing.</li>
+        <li>Coverage reports.</li>
+        <li>Default browser-like environment.</li>
+        <li>Interactive "watch" mode</li>
+    </Appear>
+</ul>
+
+---
+
+# What about Enzyme?
+
+-   React-specific testing library, created by Airbnb.
+-   Focused on unit testing.
+-   Provides abstractions to traverse DOM and find React components.
+-   API encourages testing implementation details.
+
+<Appear>
+    <img width="70px" height="70px" src="public/standard/neutral-face.png" />
+</Appear>
+
+---
+
+# react-testing-library 🐐
+
+<ul style={{ fontSize: 40, textAlign: 'left' }}>
+    <Appear>
+        <li>No abstractions, just DOM APIs.</li>
+        <li>Perfect for integration testing.</li>
+        <li>Testing like a real user === less broken tests.</li>
+        <li>Simple API, no extra config or adapters needed.</li>
+    </Appear>
+</ul>
+
+<CodeBlock>const hello = () => 'world';</CodeBlock>
 
 # Thank You
 

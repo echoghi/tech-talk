@@ -21,6 +21,10 @@
     padding: 14px;
 }
 
+.CodeMirror-scroll {
+    overflow: hidden !important;
+}
+
 .CodeMirror pre {
     font-variant-ligatures: none;
 }
