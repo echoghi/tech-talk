@@ -72,7 +72,7 @@ export { default as theme } from './theme';
 
 -   React-specific testing library, created by Airbnb.
 -   Focused on unit testing.
--   Provides abstractions to traverse DOM and find React components.
+-   Provides abstractions to traverse DOM and interact with React components.
 -   API encourages testing implementation details and component internals.
 
 <Appear>
@@ -101,6 +101,11 @@ export { default as theme } from './theme';
     </Appear>
 </ul>
 
+```notes
+- uses ReactDom.render to render dom, same as user would see.
+- No simulated events, just DOM APIs.
+```
+
 ---
 
 <CodeBlock>{goodTest}</CodeBlock>
@@ -112,7 +117,7 @@ export { default as theme } from './theme';
 -   Test components in integration, seldom isolated.
 -   Don't rely on snapshots, keep them small.
 -   Use 🐐 API to prevent testing implementation details.
--   Refactoring code !== refactoring tests.
+-   Refactoring implementation should not break tests.
 -   Future: Git hooks and continuous integration w/Jenkins.
 
 ---
