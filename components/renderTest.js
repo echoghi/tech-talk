@@ -1,7 +1,11 @@
 export const renderTest = `
+import { render, fireEvent } from 'react-testing-library';
+
 const simulateToggle = jest.fn();
 
 describe('<Tab />', () => {
+    afterEach(cleanup);
+    
     test('renders correctly when active', () => {
         const { getByTestId } = render(
             <Tab label="Tab Test" active onClick={simulateToggle} panel={<div>Test</div>} />
